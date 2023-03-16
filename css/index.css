@@ -1,0 +1,113 @@
+/* Variables */
+:root {
+    --borderRadius: 2px;
+}
+
+/* Balises */
+h1 {
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+button {
+    display: block;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    border: none;
+    border-radius: var(--borderRadius);
+    outline: none;
+    cursor: pointer;
+    transition: .1s;
+}
+button:active {
+    transform: scale(.985);
+}
+
+/* Custom */
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.app {
+    position: relative;
+    background: url("../imgs/bg-app.jpg") center/100% 100% no-repeat;
+}
+.app::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #0001;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+}
+
+.content-app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.game {
+    background-color: #fff4;
+    width: 100%;
+    max-width: 500px;
+    padding: 60px 20px;
+    box-shadow: 0 0 8px #8d8d8d;
+    border: 1px solid #fff;
+    border-radius: var(--borderRadius);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+}
+
+.game-view__pre-game button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-update {
+    background-color: #b5c6ff;
+    margin-bottom: 25px;
+    padding: 4px 12px;
+    border: 1px solid transparent;
+}
+.btn-update:hover {
+    background-color: #c8d5ff;
+    border-color: #2d4fc0;
+}
+
+.btn-action {
+    background-color: #b5ffbb;
+    padding: 4px 12px;
+    border: 1px solid transparent;
+}
+.btn-action:hover {
+    background-color: #cafdce;
+    border-color: #2bbd37;
+}
+
+.btn-choice {
+    background-color: #ffd0b5;
+    padding: 4px 12px;
+    border: 1px solid transparent;
+}
+.btn-choice:hover {
+    background-color: #ffe2d1;
+    border-color: #e97b3c;
+}
+
+.message {
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 30px;
+}
