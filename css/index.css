@@ -66,8 +66,6 @@ button:active {
     box-shadow: 0 0 8px #8d8d8d;
     border: 1px solid #fff;
     border-radius: var(--borderRadius);
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
 }
 
 .game-view__pre-game button {
@@ -95,6 +93,9 @@ button:active {
     background-color: #cafdce;
     border-color: #2bbd37;
 }
+.game-view__in-game .btn-action {
+    margin: 30px auto 0;
+}
 
 .btn-choice {
     background-color: #ffd0b5;
@@ -107,7 +108,36 @@ button:active {
 }
 
 .message {
+    position: relative;
     font-size: 1.2em;
     text-align: center;
-    margin-top: 30px;
+    max-width: max-content;
+    margin: 30px auto 0;
+    padding: 2px 12px;
+}
+.message::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+}
+.equal {
+    background-color: #aaaaaa;
+}
+.equal::after {
+    background-color: #5c5c5c;
+}
+.win {
+    background-color: #91f778;
+}
+.win::after {
+    background-color: #277713;
+}
+.loose {
+    background-color: #f88e8e;
+}
+.loose::after {
+    background-color: #921010;
 }
